@@ -49,14 +49,15 @@ class MainView(filesDir: File) : AnkoComponent<MainActivity> {
 		val props = HashMap<String, Boolean>()
 		val file = File(dir, fileName)
 
-		if (!file.exists()) {
-			props["doorClosed"] = false
-			props["windowClosed"] = false
-		} else
+		if (file.exists())
 			file.readLines().forEach {
 				val entry = it.split(":")
 				props[entry[0].trim()] = entry[1].trim().toBoolean()
 			}
+		else {
+			props["doorClosed"] = false
+			props["windowClosed"] = false
+		}
 
 		return props
 	}
