@@ -1,0 +1,5 @@
+<resources>
+	<string name="app_name">MyHome</string>
+	<string name="doorClosed">Door closed</string>
+	<string name="windowClosed">Window closed</string>
+</resources>
