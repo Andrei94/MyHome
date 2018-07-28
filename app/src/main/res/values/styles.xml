@@ -5,4 +5,7 @@
 		<!-- Customize your theme here. -->
 	</style>
 
+	<style name="GreenText" parent="android:ThemeOverlay.Material.Dark">
+		<item name="android:colorControlActivated">@color/green</item>
+	</style>
 </resources>

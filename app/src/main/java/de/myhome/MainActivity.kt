@@ -9,6 +9,7 @@ import java.io.File
 
 class MainActivity : Activity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
+		setTheme(R.style.GreenText)
 		super.onCreate(savedInstanceState)
 		MainView(filesDir).setContentView(this)
 	}
@@ -25,11 +26,13 @@ class MainView(filesDir: File) : AnkoComponent<MainActivity> {
 				text = context.getString(R.string.doorClosed)
 				textSize = 20F
 				isChecked = props["doorClosed"]!!
+				textColor = context.getColor(R.color.green)
 			}
 			val window = switch {
 				text = context.getString(R.string.windowClosed)
 				textSize = 20F
 				isChecked = props["windowClosed"]!!
+				textColor = context.getColor(R.color.green)
 			}
 
 			door.onCheckedChange { _, _ ->
